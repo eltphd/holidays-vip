@@ -1,6 +1,5 @@
 import { NextResponse } from "next/server";
-import type Stripe from "stripe";
-import { stripe } from "@/lib/stripe";
+import Stripe from "stripe";
 import { supabaseServer } from "@/lib/supabase";
 
 /**
@@ -16,7 +15,8 @@ export async function POST(req: Request) {
   const body = await req.text();
   let event: Stripe.Event;
   try {
-    event = stripe().webhooks.constructEvent(body, sig, secret);
+    // Static verifier: needs only the endpoint signing secret, not the account secret key.
+    event = Stripe.webhooks.constructEvent(body, sig, secret);
   } catch (err) {
     return NextResponse.json({ error: `signature: ${(err as Error).message}` }, { status: 400 });
   }
