@@ -34,7 +34,9 @@ async function main() {
   const rows = parseCsv(readFileSync(file, "utf8"));
   for (const r of rows) {
     for (const [k, v] of Object.entries(r)) {
-      if (/@|\+?\d[\d\s().-]{8,}\d/.test(v)) throw new Error(`Row "${r.handle}": column ${k} looks like contact info. Contact details stay in Erica's private sheet.`);
+      const digits = v.replace(/\D/g, "").length;
+      const looksLikeDate = /^\d{4}-\d{2}-\d{2}$/.test(v);
+      if (/@/.test(v) || (digits >= 10 && !looksLikeDate)) throw new Error(`Row "${r.handle}": column ${k} looks like contact info. Contact details stay in Erica's private sheet.`);
     }
     const roles = r.lens_roles.split(";").map((s) => s.trim()).filter(Boolean);
     const bad = roles.filter((x) => !ROLES.has(x));
