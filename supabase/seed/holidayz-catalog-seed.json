@@ -1,0 +1,348 @@
+{
+  "version": "catalog-dev-build-v1",
+  "prepared": "2026-09-20",
+  "seller": "Altered Earth Press / US-Squared Research Institute",
+  "stripe_account": "acct_1QjUtXA08KNIsxXX",
+  "supabase_project": "avrpthgahcrvsqpruziz",
+  "campaign_metadata": "winter-light-2026",
+  "feature_flag": "NEXT_PUBLIC_CATALOG_V2",
+  "flag_on_date": "2026-10-26",
+  "categories": [
+    {
+      "id": "winter-light",
+      "display_name": "Winter Light",
+      "tagline": "Culturally competent holiday kits for families with teens",
+      "season_start": "2026-12-01",
+      "season_end": "2027-01-01",
+      "sort_order": 1,
+      "status": "live",
+      "note": "Existing category; listed so lens variants can reference it. Do not modify existing SKUs except success URL."
+    },
+    {
+      "id": "whole-table",
+      "display_name": "Whole Table",
+      "tagline": "Everybody who's coming is already welcome.",
+      "season_start": "2026-11-20",
+      "season_end": "2027-01-01",
+      "sort_order": 2,
+      "status": "draft",
+      "category_rules": [
+        "Nothing requires anyone to come out, be outed, or explain themselves.",
+        "Discreet-delivery mode on every SKU: neutral email subject, neutral file names, neutral Stripe product name, cover art that reads as a winter kit."
+      ]
+    },
+    {
+      "id": "wellness-season",
+      "display_name": "Wellness Season",
+      "tagline": "The one time of year everyone's already in the room.",
+      "season_start": "2026-11-20",
+      "season_end": "2027-01-01",
+      "sort_order": 3,
+      "status": "draft",
+      "category_rules": [
+        "Practices, not treatment. No diet, weight, diagnostic, or outcome language.",
+        "Every kit carries a 'this isn't therapy' card with a verified warmline number.",
+        "Every activity has a time estimate, a sensory note, and a low-demand version."
+      ]
+    }
+  ],
+  "kits": [
+    {
+      "id": "wt-open-house",
+      "category_id": "whole-table",
+      "display_name": "Open House",
+      "format": "make",
+      "audience": ["host", "gift-giver"],
+      "summary": "An affirming Kwanzaa or winter-break gathering, without a speech.",
+      "contents": [
+        "Host run-of-show with an 'everyone's name, everyone's person' welcome",
+        "Place-card and pronoun-optional name-tag templates",
+        "Playlist and menu cards",
+        "'Who's not at the table' note with three scripts for the relative who says something",
+        "Seven table-card crafts, Nguzo Saba read through community"
+      ],
+      "lens_available": false,
+      "audit_owners": ["trans", "gay-married", "adult"],
+      "deliver_by": "2026-12-01",
+      "fallback_tier": 1,
+      "sort_order": 1
+    },
+    {
+      "id": "wt-coming-home",
+      "category_id": "whole-table",
+      "display_name": "Coming Home",
+      "format": "practice",
+      "audience": ["adult-child", "parent"],
+      "summary": "Two mirrored decks for the one returning and the ones receiving.",
+      "contents": [
+        "Returning deck and Receiving deck (mirrored prompts)",
+        "Boundaries card in peer register",
+        "Repair script that doesn't require agreement first",
+        "'Leave early with love' exit plan",
+        "Soul Compass check-in for both sides"
+      ],
+      "lens_available": false,
+      "audit_owners": ["lesbian", "adolescent", "adult"],
+      "deliver_by": "2026-12-01",
+      "fallback_tier": 1,
+      "sort_order": 2
+    },
+    {
+      "id": "wt-chosen-family-table",
+      "category_id": "whole-table",
+      "display_name": "Chosen Family Table",
+      "format": "make",
+      "audience": ["couple", "chosen-family-host"],
+      "summary": "A feast for the family you chose.",
+      "contents": [
+        "Feast run-of-show",
+        "Toast-and-story ritual",
+        "Gift exchange that doesn't assume money",
+        "Photo-and-archive prompt",
+        "'The ones who couldn't come' candle moment"
+      ],
+      "lens_available": false,
+      "audit_owners": ["gay-married", "lesbian"],
+      "deliver_by": "2026-12-12",
+      "fallback_tier": 2,
+      "sort_order": 3
+    },
+    {
+      "id": "wt-elder-light",
+      "category_id": "whole-table",
+      "display_name": "Elder Light",
+      "format": "practice",
+      "audience": ["elder", "family"],
+      "summary": "Legacy, recorded, on the elder's terms.",
+      "contents": [
+        "Oral-history interview kit (12 questions, phone-recorded)",
+        "Legacy letter template",
+        "'What I want you to keep' inventory",
+        "Intergenerational Umoja night",
+        "Care-and-consent notes on visibility for elders who came up under different rules"
+      ],
+      "lens_available": false,
+      "audit_owners": ["older-adult", "trans"],
+      "deliver_by": "2026-12-12",
+      "fallback_tier": 2,
+      "sort_order": 4
+    },
+    {
+      "id": "wt-complete",
+      "category_id": "whole-table",
+      "display_name": "Whole Table Complete",
+      "format": "bundle",
+      "audience": ["household"],
+      "summary": "All four Whole Table kits plus the family readout.",
+      "contents": ["wt-open-house", "wt-coming-home", "wt-chosen-family-table", "wt-elder-light", "Family Soul Compass readout"],
+      "lens_available": false,
+      "audit_owners": [],
+      "deliver_by": "2026-12-12",
+      "fallback_tier": 2,
+      "sort_order": 5
+    },
+    {
+      "id": "ws-nourish",
+      "category_id": "wellness-season",
+      "display_name": "Nourish",
+      "format": "make",
+      "domain": "nutritional",
+      "audience": ["family", "cook", "teen"],
+      "summary": "Cook together, as the food actually is.",
+      "contents": [
+        "Cook-together plans on Black holiday food with one optional adaptation per dish",
+        "'Who taught you this' recipe-archive card",
+        "Hydration-and-sleep card for the week",
+        "Grocery list split by generation so the teen owns a dish"
+      ],
+      "lens_available": true,
+      "audit_owners": ["older-adult", "adult"],
+      "deliver_by": "2026-11-15",
+      "fallback_tier": 1,
+      "sort_order": 1
+    },
+    {
+      "id": "ws-mind-lanterns",
+      "category_id": "wellness-season",
+      "display_name": "Mind Lanterns",
+      "format": "make",
+      "domain": "cognitive",
+      "audience": ["family", "elder", "teen"],
+      "summary": "Games night the elders win.",
+      "contents": [
+        "Intergenerational games night (memory, storytelling, pattern)",
+        "'Brain myths' card",
+        "Phone-down hour design",
+        "Eighth-night puzzle the teen designs"
+      ],
+      "lens_available": true,
+      "audit_owners": ["older-adult", "adolescent"],
+      "deliver_by": "2026-12-12",
+      "fallback_tier": 2,
+      "sort_order": 2
+    },
+    {
+      "id": "ws-steady",
+      "category_id": "wellness-season",
+      "display_name": "Steady",
+      "format": "practice",
+      "domain": "psychological",
+      "audience": ["family", "adult", "teen"],
+      "summary": "Regulation, together, with the root named.",
+      "contents": [
+        "Breath, movement, and quiet practices with a Black cultural root named for each",
+        "Grief-at-the-holidays card for the empty chair",
+        "Overwhelm exit plan for anyone",
+        "Soul Compass check-in",
+        "'This isn't therapy' card"
+      ],
+      "lens_available": true,
+      "audit_owners": ["adult", "trans"],
+      "deliver_by": "2026-12-01",
+      "fallback_tier": 2,
+      "sort_order": 3
+    },
+    {
+      "id": "ws-teen-room",
+      "category_id": "wellness-season",
+      "display_name": "Teen Room",
+      "format": "practice",
+      "domain": "adolescent",
+      "audience": ["teen"],
+      "summary": "Written to the teen, not the parent. Co-authored by Malia Phoenix.",
+      "contents": [
+        "'My terms for the holidays' one-pager (share or don't)",
+        "Low-demand participation menu",
+        "'Things I'd never say at the table' journal",
+        "The eighth night is theirs to design"
+      ],
+      "lens_available": true,
+      "audit_owners": ["adolescent"],
+      "deliver_by": "2026-12-01",
+      "fallback_tier": 1,
+      "sort_order": 4
+    },
+    {
+      "id": "ws-family-weather",
+      "category_id": "wellness-season",
+      "display_name": "Family Weather",
+      "format": "practice",
+      "domain": "family-dynamics-communications",
+      "audience": ["family", "host", "guest"],
+      "summary": "Say your weather, not your reasons.",
+      "contents": [
+        "Weather-report check-in",
+        "Repair scripts",
+        "Boundaries card for hosts and guests",
+        "'Same story, three versions' exercise",
+        "Ending a conversation without ending the relationship"
+      ],
+      "lens_available": true,
+      "audit_owners": ["adult", "lesbian"],
+      "deliver_by": "2026-11-15",
+      "fallback_tier": 1,
+      "sort_order": 5
+    },
+    {
+      "id": "ws-legacy-table",
+      "category_id": "wellness-season",
+      "display_name": "Legacy Table",
+      "format": "make",
+      "domain": "intergenerational",
+      "audience": ["family", "elder", "teen"],
+      "summary": "What we're carrying forward.",
+      "contents": [
+        "Oral-history interview kit",
+        "Family tree that includes chosen family",
+        "Recipe and photo archive prompts",
+        "Legacy letter",
+        "'What we're carrying forward' Kuumba night",
+        "Family readout"
+      ],
+      "lens_available": true,
+      "audit_owners": ["older-adult"],
+      "deliver_by": "2026-12-12",
+      "fallback_tier": 2,
+      "sort_order": 6
+    },
+    {
+      "id": "ws-complete",
+      "category_id": "wellness-season",
+      "display_name": "Wellness Season Complete",
+      "format": "bundle",
+      "audience": ["household"],
+      "summary": "All six Wellness Season kits plus the family readout.",
+      "contents": ["ws-nourish", "ws-mind-lanterns", "ws-steady", "ws-teen-room", "ws-family-weather", "ws-legacy-table", "Family Soul Compass readout"],
+      "lens_available": true,
+      "audit_owners": [],
+      "deliver_by": "2026-12-12",
+      "fallback_tier": 2,
+      "sort_order": 7
+    }
+  ],
+  "skus": [
+    { "id": "wt-open-house-digital", "kit_id": "wt-open-house", "delivery": "digital", "lens": null, "price_cents": 2900, "status": "hidden", "deliver_by": "2026-12-01", "stripe_product_name": "holidayz.vip kit" },
+    { "id": "wt-coming-home-digital", "kit_id": "wt-coming-home", "delivery": "digital", "lens": null, "price_cents": 3900, "status": "hidden", "deliver_by": "2026-12-01", "stripe_product_name": "holidayz.vip kit" },
+    { "id": "wt-chosen-family-table-digital", "kit_id": "wt-chosen-family-table", "delivery": "digital", "lens": null, "price_cents": 3900, "status": "hidden", "deliver_by": "2026-12-12", "stripe_product_name": "holidayz.vip kit" },
+    { "id": "wt-elder-light-digital", "kit_id": "wt-elder-light", "delivery": "digital", "lens": null, "price_cents": 2900, "status": "hidden", "deliver_by": "2026-12-12", "stripe_product_name": "holidayz.vip kit" },
+    { "id": "wt-complete-digital", "kit_id": "wt-complete", "delivery": "digital", "lens": null, "price_cents": 9900, "status": "hidden", "deliver_by": "2026-12-12", "stripe_product_name": "holidayz.vip kit bundle" },
+    { "id": "ws-nourish-digital", "kit_id": "ws-nourish", "delivery": "digital", "lens": null, "price_cents": 2400, "status": "hidden", "deliver_by": "2026-11-15", "stripe_product_name": "Wellness Season — Nourish" },
+    { "id": "ws-mind-lanterns-digital", "kit_id": "ws-mind-lanterns", "delivery": "digital", "lens": null, "price_cents": 1900, "status": "hidden", "deliver_by": "2026-12-12", "stripe_product_name": "Wellness Season — Mind Lanterns" },
+    { "id": "ws-steady-digital", "kit_id": "ws-steady", "delivery": "digital", "lens": null, "price_cents": 2900, "status": "hidden", "deliver_by": "2026-12-01", "stripe_product_name": "Wellness Season — Steady" },
+    { "id": "ws-teen-room-digital", "kit_id": "ws-teen-room", "delivery": "digital", "lens": null, "price_cents": 1900, "status": "hidden", "deliver_by": "2026-12-01", "stripe_product_name": "Wellness Season — Teen Room" },
+    { "id": "ws-family-weather-digital", "kit_id": "ws-family-weather", "delivery": "digital", "lens": null, "price_cents": 2900, "status": "hidden", "deliver_by": "2026-11-15", "stripe_product_name": "Wellness Season — Family Weather" },
+    { "id": "ws-legacy-table-digital", "kit_id": "ws-legacy-table", "delivery": "digital", "lens": null, "price_cents": 3400, "status": "hidden", "deliver_by": "2026-12-12", "stripe_product_name": "Wellness Season — Legacy Table" },
+    { "id": "ws-complete-digital", "kit_id": "ws-complete", "delivery": "digital", "lens": null, "price_cents": 7900, "status": "hidden", "deliver_by": "2026-12-12", "stripe_product_name": "Wellness Season — Complete" },
+    { "id": "wl-make-digital-affirming", "kit_id": "wl-make", "delivery": "digital", "lens": "affirming", "price_cents": 2900, "status": "hidden", "deliver_by": "2026-10-15", "stripe_product_name": "holidayz.vip kit", "note": "Lens variant of existing Winter Light Make digital ($29). kit_id refers to the existing Winter Light kit; create a catalog_kits row for it when loading." },
+    { "id": "wl-practice-digital-affirming", "kit_id": "wl-practice", "delivery": "digital", "lens": "affirming", "price_cents": 3900, "status": "hidden", "deliver_by": "2026-10-15", "stripe_product_name": "holidayz.vip kit", "note": "Lens variant of existing Winter Light Practice digital ($39)." }
+  ],
+  "lens": {
+    "id": "affirming",
+    "display_name": "Affirming family lens",
+    "price_delta_cents": 0,
+    "adds": [
+      "4-page affirming prompt insert matched to the kit",
+      "Host scripts from Open House",
+      "Discreet-delivery mode"
+    ],
+    "available_on": ["wl-make", "wl-practice", "ws-nourish", "ws-mind-lanterns", "ws-steady", "ws-teen-room", "ws-family-weather", "ws-legacy-table", "ws-complete"],
+    "implementation_note": "Seed uses a separate SKU row per lens variant. Wellness lens SKUs are added as each kit reaches audit_status = approved."
+  },
+  "routes": [
+    { "path": "/", "change": "Add three category tiles under Winter Light hero" },
+    { "path": "/whole-table", "type": "category", "flag": true },
+    { "path": "/whole-table/[kit]", "type": "kit", "flag": true },
+    { "path": "/wellness-season", "type": "category", "layout": "calendar", "flag": true },
+    { "path": "/wellness-season/[kit]", "type": "kit", "flag": true },
+    { "path": "/lens/affirming", "type": "lens-explainer", "flag": true },
+    { "path": "/thanks", "type": "post-checkout", "query": "sku", "flag": false },
+    { "path": "/community-builders", "type": "credits", "flag": true }
+  ],
+  "audit_rubric": [
+    { "key": "safety_first", "label": "Safety first", "applies_to": "all", "blocking_on_zero": true },
+    { "key": "representation", "label": "Representation", "applies_to": "all", "blocking_on_zero": true },
+    { "key": "heritage_as_content", "label": "Heritage as content", "applies_to": "all", "blocking_on_zero": true },
+    { "key": "peer_register", "label": "Peer register", "applies_to": "all", "blocking_on_zero": true },
+    { "key": "neurodivergent_first", "label": "Neurodivergent-first", "applies_to": "all", "blocking_on_zero": true },
+    { "key": "measured_returned", "label": "Measured, returned to the family", "applies_to": "all", "blocking_on_zero": true },
+    { "key": "outing_risk", "label": "Outing risk", "applies_to": "whole-table", "blocking_on_zero": true },
+    { "key": "no_clinical_creep", "label": "No clinical creep", "applies_to": "wellness-season", "blocking_on_zero": true }
+  ],
+  "audit_scale": { "0": "must fix", "1": "works with edits", "2": "ready" },
+  "auditor_roles": ["older-adult", "adolescent", "adult", "gay-married", "lesbian", "trans", "parent"],
+  "milestones": [
+    { "date": "2026-09-27", "what": "Slugs and names frozen" },
+    { "date": "2026-10-04", "what": "Auditor consents back" },
+    { "date": "2026-10-12", "what": "Audit round 1 opens" },
+    { "date": "2026-10-26", "what": "Flag on; pre-orders open (digital)" },
+    { "date": "2026-10-27", "what": "Audit round 2 opens" },
+    { "date": "2026-11-15", "what": "Nourish + Family Weather delivered" },
+    { "date": "2026-12-01", "what": "Steady, Teen Room, Coming Home, Open House delivered" },
+    { "date": "2026-12-12", "what": "All remaining kits and bundles delivered" },
+    { "date": "2027-01-14", "what": "Day-120 readout" }
+  ],
+  "fallback": {
+    "tier_1_ships_regardless": ["wt-open-house", "wt-coming-home", "ws-nourish", "ws-family-weather", "ws-teen-room"],
+    "tier_2_defer_to_2027_if_needed": ["wt-chosen-family-table", "wt-elder-light", "wt-complete", "ws-mind-lanterns", "ws-steady", "ws-legacy-table", "ws-complete"]
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "name": "holidays-vip",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint",
+    "smoke": "tsx --tsconfig tsconfig.json scripts/smoke.tsx",
+    "seed:load": "tsx scripts/load-seed.ts",
+    "seed:sql": "tsx scripts/load-seed.ts --sql",
+    "stripe:links": "tsx scripts/create-stripe-links.ts",
+    "stripe:repoint": "tsx scripts/repoint-links-to-thanks.ts"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.116.0",
+    "next": "16.3.5",
+    "react": "19.2.8",
+    "react-dom": "19.2.8",
+    "resend": "^6.28.1",
+    "stripe": "^22.6.2"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "dotenv": "^18.0.1",
+    "eslint": "^9",
+    "eslint-config-next": "16.3.5",
+    "tailwindcss": "^4",
+    "tsx": "^4.23.15",
+    "typescript": "^5"
+  }
+}

@@ -1,0 +1,63 @@
+@import "tailwindcss";
+
+/* Tokens mirror the live Winter Light page (ivory / ink / brass / cacao / firefly). */
+:root {
+  --background: #F6F1E7;
+  --foreground: #1C211D;
+  --muted: #5d5a52;
+  --card: #ffffff;
+  --border: #E5DBC8;
+  --accent: #1C211D;
+  --accent-ink: #F6F1E7;
+  --gold: #A8874F;
+  --green: #1f5c3a;
+  --soft: #EFE7D8;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-card: var(--card);
+  --color-border: var(--border);
+  --color-accent: var(--accent);
+  --color-accent-ink: var(--accent-ink);
+  --color-gold: var(--gold);
+  --color-green: var(--green);
+  --color-soft: var(--soft);
+  --font-sans: var(--font-archivo);
+  --font-display: var(--font-newsreader);
+  --font-mono: var(--font-plex-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #1F1410;
+    --foreground: #D9CFBE;
+    --muted: #A99C88;
+    --card: #2A1C16;
+    --border: #3d2c24;
+    --accent: #E8C876;
+    --accent-ink: #1F1410;
+    --gold: #E8C876;
+    --green: #7fc99a;
+    --soft: #261a14;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), "Helvetica Neue", Arial, sans-serif;
+}
+
+h1, h2:not(.text-sm), h3 {
+  font-family: var(--font-display), Georgia, serif;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+
+a:focus-visible, button:focus-visible, input:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 3px;
+}
