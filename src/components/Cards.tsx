@@ -22,17 +22,34 @@ export function DiscreetDeliveryCard({ compact = false }: { compact?: boolean })
   );
 }
 
-/** Wellness Season: visible before purchase on every kit page (category rule). */
+/** Wellness Season: visible before purchase on every kit page (category rule).
+ *  Numbers verified against each organization's own site on 2026-09-21. Re-verify before each season. */
 export function NotTherapyCard() {
   return (
     <aside aria-labelledby="not-therapy-heading" className="rounded-lg border border-border bg-soft p-4">
       <h2 id="not-therapy-heading" className="font-semibold">This isn&rsquo;t therapy</h2>
       <p className="mt-1 text-sm">
         These are practices, not treatment. We name where each one comes from; we don&rsquo;t promise what it will do.
-        If someone at your table needs more than a practice, reach for a professional. If it&rsquo;s urgent, call or text
-        988 (Suicide &amp; Crisis Lifeline, US).
+        If someone at your table needs more than a practice, reach for a professional. The one rule in this house:
+        anyone can pass.
       </p>
-      <p className="mt-2 text-xs text-muted">Additional warmline numbers are confirmed before publish (see spec §7).</p>
+      <p className="mt-3 text-sm font-medium">If it&rsquo;s heavier than a practice can hold, these are people who pick up:</p>
+      <ul className="mt-1 space-y-1 text-sm">
+        <li>
+          <span className="font-medium">988 Suicide &amp; Crisis Lifeline</span> &mdash; call or text{" "}
+          <a href="tel:988" className="underline">988</a>, any hour.
+        </li>
+        <li>
+          <span className="font-medium">Call BlackLine</span> &mdash;{" "}
+          <a href="tel:+18006045841" className="underline">1-800-604-5841</a>. Peer support by us, for us, with an
+          LGBTQ+ Black femme lens.
+        </li>
+        <li>
+          <span className="font-medium">Trans Lifeline</span> &mdash;{" "}
+          <a href="tel:+18775658860" className="underline">877-565-8860</a>. Run by trans people, for trans people.
+          Weekdays, 1&ndash;9 PM Eastern.
+        </li>
+      </ul>
     </aside>
   );
 }

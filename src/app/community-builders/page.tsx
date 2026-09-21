@@ -18,6 +18,7 @@ export default async function CommunityBuildersPage() {
   return (
     <div className="max-w-2xl space-y-6">
       <h1 className="text-4xl font-semibold tracking-tight">Community builders</h1>
+      <p className="text-lg italic">Small lights that find each other.</p>
       <p className="text-lg text-muted">
         Whole Table and Wellness Season were read, marked up, and co-authored by community members before they
         shipped. Nobody is listed here by default; everyone below chose to be.

@@ -47,6 +47,10 @@ export default async function LensPage() {
           ))}
         </ul>
         <p className="text-sm text-muted">Wellness Season lens variants switch on as each kit clears community audit.</p>
+        <p className="text-sm text-muted">
+          Organizations: the lens is a named option on the ERG Heritage Day package, at the same price, with the same
+          discreet handling. Ask for it by name or just tick the box on the one-pager.
+        </p>
       </section>
     </div>
   );
