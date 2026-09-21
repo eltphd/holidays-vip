@@ -65,7 +65,8 @@ async function main() {
       line_items: [{ price: price.id, quantity: 1 }],
       allow_promotion_codes: true,
       metadata,
-      payment_intent_data: { metadata },
+      // Card statement reads "FEELINGSUN* <suffix>" (account prefix). Discreet SKUs must not name the category.
+      payment_intent_data: { metadata, statement_descriptor_suffix: discreet ? "HOLIDAYZ KIT" : "WELLNESS SEASON" },
       after_completion: { type: "redirect", redirect: { url: successUrl } },
       // No shipping_address_collection: digital only.
     });
