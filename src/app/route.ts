@@ -35,7 +35,7 @@ function tilesSection(categories: Category[]): string {
         <div class="name">${esc(c.display_name)}</div>
         <p class="kit-intro" style="margin:8px 0 12px">${esc(c.tagline ?? "")}</p>
         <ul><li>${esc(copy.blurb)}</li></ul>
-        <div class="buy"><a class="btn btn-outline" href="/${esc(c.id)}">See the kits</a></div>
+        <div class="cta" style="margin-top:16px"><a class="btn btn-outline" href="/${esc(c.id)}">See the kits</a></div>
       </article>`;
     })
     .join("\n");
