@@ -1,0 +1,2 @@
+handle,lens_roles,credit_choice,credit_name,compensation,is_minor,consent_signed_at,guardian_consent_at,contact_ref
+Example,"trans;adult",first-name,,honorarium,false,2026-10-01,,1

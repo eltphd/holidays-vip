@@ -42,3 +42,6 @@ next-env.d.ts
 
 # keep the example env committed
 !.env.example
+
+# filled auditor CSV (handles only, but keep it out of git anyway)
+docs/audit/auditors.csv

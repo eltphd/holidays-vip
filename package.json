@@ -11,7 +11,8 @@
     "seed:load": "tsx scripts/load-seed.ts",
     "seed:sql": "tsx scripts/load-seed.ts --sql",
     "stripe:links": "tsx scripts/create-stripe-links.ts",
-    "stripe:repoint": "tsx scripts/repoint-links-to-thanks.ts"
+    "stripe:repoint": "tsx scripts/repoint-links-to-thanks.ts",
+    "auditors:load": "tsx scripts/load-auditors.ts"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.116.0",
