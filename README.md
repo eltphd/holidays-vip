@@ -26,7 +26,8 @@ Pages ship dark. Set `NEXT_PUBLIC_CATALOG_V2=true` to light the new routes (flag
 | Kit page template (one component, all kits) | `src/components/KitPage.tsx` + `BuyBox.tsx` + `StandardsStrip.tsx` + `Cards.tsx` |
 | Routes | `/` · `/whole-table` · `/whole-table/[kit]` · `/wellness-season` (calendar) · `/wellness-season/[kit]` · `/lens/affirming` · `/thanks` · `/community-builders` |
 | Webhook → `holidayz_orders` | `src/app/api/stripe/webhook/route.ts` |
-| Daily delivery mailer (Resend, neutral subject for discreet SKUs) | `src/app/api/cron/deliver/route.ts` + `src/lib/mailer.ts` + `vercel.json` cron |
+| Daily delivery mailer (Resend, neutral subject for discreet SKUs; 7-day signed URLs from the private `holidayz-kits` Storage bucket, object key = `catalog_skus.file_name`) | `src/app/api/cron/deliver/route.ts` + `src/lib/mailer.ts` + `vercel.json` cron |
+| Operator endpoints (need `Authorization: Bearer $CRON_SECRET`) | `/api/status` (which integrations are configured) · `/api/admin/test-delivery?to=&discreet=1` (send one test email) |
 | Stripe link creation (dry-run default) | `scripts/create-stripe-links.ts` |
 | Repoint existing Winter Light links to `/thanks` | `scripts/repoint-links-to-thanks.ts` |
 | Discreet-mode checklist | `docs/discreet-mode-checklist.md` |
