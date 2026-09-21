@@ -8,7 +8,8 @@
  *
  * Links without a sku (no metadata and no --map) are listed and left alone so nothing gets a wrong sku.
  */
-import "dotenv/config";
+import { config as loadEnv } from "dotenv";
+loadEnv({ path: [".env.local", ".env"] });
 import Stripe from "stripe";
 
 const APPLY = process.argv.includes("--apply");

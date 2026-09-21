@@ -13,7 +13,8 @@
  *   after_completion → NEXT_PUBLIC_SITE_URL/thanks?sku=<id>
  *   product name = catalog_skus.stripe_product_name (neutral for Whole Table + lens SKUs)
  */
-import "dotenv/config";
+import { config as loadEnv } from "dotenv";
+loadEnv({ path: [".env.local", ".env"] });
 import Stripe from "stripe";
 import { createClient } from "@supabase/supabase-js";
 

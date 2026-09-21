@@ -5,7 +5,8 @@
  *   npx tsx scripts/load-seed.ts          # upsert via supabase-js (needs SUPABASE_SERVICE_ROLE_KEY)
  *   npx tsx scripts/load-seed.ts --sql    # print the equivalent SQL instead (paste into the SQL editor / MCP)
  */
-import "dotenv/config";
+import { config as loadEnv } from "dotenv";
+loadEnv({ path: [".env.local", ".env"] });
 import { readFileSync } from "node:fs";
 import { resolve } from "node:path";
 import { createClient } from "@supabase/supabase-js";
